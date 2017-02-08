@@ -1,0 +1,16 @@
+{% extends "layout.html.twig" %}
+
+{% block pageHeader %}View Organisation{% endblock %}
+
+{% block content %}
+    <dl class="dl-horizontal">
+        <dt>Name</dt>
+        <dd>{{ organisation.name }}</dd>
+
+        <dt>Address</dt>
+        <dd></dd>
+
+        <dt>Phone Number</dt>
+        <dd>{{ organisation.phoneNumber }}</dd>
+    </dl>
+{% endblock %}

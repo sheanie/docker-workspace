@@ -1,0 +1,35 @@
+{% extends "layout.html.twig" %}
+
+{% block pageHeader %}View User{% endblock %}
+
+{% block content %}
+    <dl class="dl-horizontal">
+        <dt>Name</dt>
+        <dd>{{ user.name }}</dd>
+
+        <dt>Address</dt>
+        <dd>{{ user.address.addressLine1 }}</dd>
+
+        <dt>Phone Number</dt>
+        <dd>{{ user.phoneNumber }}</dd>
+
+        <dt>Email Address</dt>
+        <dd>{{ user.emailAddress }}</dd>
+
+        <dt>Employee ID</dt>
+        <dd>{{ user.employeeId }}</dd>
+
+        <dt>Role</dt>
+        <dd>{{ user.role.name }}</dd>
+
+        <dt>Organisation</dt>
+        <dd>{{ user.organisation.name }}</dd>
+
+        <dt>Date of Birth</dt>
+        <dd>{{ user.dateOfBirth | date('d/m/Y') }}</dd>
+
+        <dt>In Probation</dt>
+        <dd>{% if user.inProbation %}yes{% else %}no{% endif%}</dd>
+
+    </dl>
+{% endblock %}

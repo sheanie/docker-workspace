@@ -1,0 +1,22 @@
+{% extends "layout.html.twig" %}
+
+{% block pageHeader %}User List{% endblock %}
+
+{% block content %}
+    <table class="table table-striped">
+        <tr>
+            <th>Name</th>
+            <th>Organisation</th>
+            <th>Employee ID</th>
+            <th>&nbsp;</th>
+        </tr>
+   {% for user in users %}
+       <tr>
+           <td>{{ user.name }}</td>
+           <td>{{ user.organisation.name }}</td>
+           <td>{{ user.employeeId }}</td>
+           <td><a href="/users/{{ user.id }}">view</a></td>
+       </tr>
+   {% endfor %}
+    </table>
+{% endblock %}
